@@ -2,6 +2,7 @@ import csv
 import numpy
 import sys
 import wfdb
+from wfdb import processing
 
 ann_str_to_num  = {
     '(AFIB\x00': 0,
@@ -192,6 +193,17 @@ if __name__ == "__main__":
     arg1 = str(sys.argv[1])
     if arg1 == 'all':
         for record_id in VFDB_RECORDS:
-            save_rr_segment_to_csv(str(record_id))
+            record = str(record_id)
+            qrs = load_qrs_i(record)
+            print qrs.size
+
+            sig, fields = wfdb.rdsamp('./vfdb/' + record, channels=[0])
+            xqrs = processing.XQRS(sig=sig[:,0], fs=fields['fs'])
+            xqrs.detect()
+            print xqrs.qrs_inds.size
+
+            print "\n"
+
+            #save_rr_segment_to_csv(str(record_id))
     else:
         record_id = arg1
