@@ -1,0 +1,123 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     segments
+Instances:    6757
+Attributes:   11
+              seg-0
+              seg-1
+              seg-2
+              seg-3
+              seg-4
+              seg-5
+              seg-6
+              seg-7
+              seg-8
+              seg-9
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                               Class
+Attribute                       AFIB      B-VT-VF-VFL-ASYS                    BI HGEA-N-NOD-PM-SBR-VER                  SVTA
+                              (0.05)                (0.36)                 (0.1)                (0.45)                (0.03)
+=============================================================================================================================
+seg-0
+  mean                       258.4009              112.0648              156.2145              195.2965              157.4601
+  std. dev.                  123.2353               82.9644              107.1786               92.1121               27.6486
+  weight sum                      350                  2461                   696                  3023                   227
+  precision                    7.1875                7.1875                7.1875                7.1875                7.1875
+
+seg-1
+  mean                       248.7931              111.1252              157.0223              195.0397              159.1627
+  std. dev.                  115.2042               71.9796              134.1479               81.9813               25.3366
+  weight sum                      350                  2461                   696                  3023                   227
+  precision                   11.0828               11.0828               11.0828               11.0828               11.0828
+
+seg-2
+  mean                       268.8277              108.4219              150.7347              193.4428              153.8401
+  std. dev.                  499.5448               66.1311               45.2037               88.5447               41.4382
+  weight sum                      350                  2461                   696                  3023                   227
+  precision                   29.2476               29.2476               29.2476               29.2476               29.2476
+
+seg-3
+  mean                        252.181              107.9628              153.4426              194.3771              161.4536
+  std. dev.                  132.4448                    63               60.5917               89.3965                30.204
+  weight sum                      350                  2461                   696                  3023                   227
+  precision                    6.2951                6.2951                6.2951                6.2951                6.2951
+
+seg-4
+  mean                       243.9232              109.6324              154.4729              194.5023              158.4473
+  std. dev.                  112.5665               63.2684              101.4744               84.4094               25.7634
+  weight sum                      350                  2461                   696                  3023                   227
+  precision                    8.8525                8.8525                8.8525                8.8525                8.8525
+
+seg-5
+  mean                       242.1359              112.1605               158.052               195.956              158.7803
+  std. dev.                  105.7306               83.8668              121.8305              110.4359               31.1772
+  weight sum                      350                  2461                   696                  3023                   227
+  precision                   13.2026               13.2026               13.2026               13.2026               13.2026
+
+seg-6
+  mean                       253.1443              109.0308              156.1262              194.7167              160.3061
+  std. dev.                  201.4499               68.9951              160.2982               92.0912               27.7872
+  weight sum                      350                  2461                   696                  3023                   227
+  precision                   13.6392               13.6392               13.6392               13.6392               13.6392
+
+seg-7
+  mean                       241.2516              111.7326               160.872              193.0963              160.1703
+  std. dev.                  110.1625               65.1584              142.3963               84.9819               27.9264
+  weight sum                      350                  2461                   696                  3023                   227
+  precision                    8.7338                8.7338                8.7338                8.7338                8.7338
+
+seg-8
+  mean                       251.7467              112.5194              153.3931              193.9826              157.1121
+  std. dev.                  126.4965               86.9609               61.4972               81.6095               29.4586
+  weight sum                      350                  2461                   696                  3023                   227
+  precision                    7.0219                7.0219                7.0219                7.0219                7.0219
+
+seg-9
+  mean                        254.154              106.6122              158.2624              190.2516              162.9899
+  std. dev.                   207.735               67.6721              235.1253               82.9762               35.4465
+  weight sum                      350                  2461                   696                  3023                   227
+  precision                   20.1299               20.1299               20.1299               20.1299               20.1299
+
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3664               54.2252 %
+Incorrectly Classified Instances      3093               45.7748 %
+Kappa statistic                          0.3654
+Mean absolute error                      0.1869
+Root mean squared error                  0.4114
+Relative absolute error                 71.5798 %
+Root relative squared error            113.8694 %
+Total Number of Instances             6757     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.411    0.064    0.259      0.411    0.318      0.280    0.795     0.229     AFIB
+                 0.887    0.233    0.686      0.887    0.773      0.631    0.897     0.862     B-VT-VF-VFL-ASYS
+                 0.004    0.007    0.067      0.004    0.008      -0.010   0.449     0.091     BI
+                 0.380    0.075    0.804      0.380    0.516      0.371    0.748     0.696     HGEA-N-NOD-PM-SBR-VER
+                 0.824    0.208    0.121      0.824    0.211      0.264    0.895     0.498     SVTA
+Weighted Avg.    0.542    0.129    0.634      0.542    0.537      0.418    0.779     0.663     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e   <-- classified as
+  144   89    1  116    0 |    a = AFIB
+   41 2182   28  138   72 |    b = B-VT-VF-VFL-ASYS
+    4  161    3    3  525 |    c = BI
+  368  732   13 1148  762 |    d = HGEA-N-NOD-PM-SBR-VER
+    0   17    0   23  187 |    e = SVTA
+
+

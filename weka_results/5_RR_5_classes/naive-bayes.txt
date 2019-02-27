@@ -1,0 +1,88 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     segments
+Instances:    13514
+Attributes:   6
+              seg-0
+              seg-1
+              seg-2
+              seg-3
+              seg-4
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                               Class
+Attribute                       AFIB      B-VT-VF-VFL-ASYS                    BI HGEA-N-NOD-PM-SBR-VER                  SVTA
+                              (0.05)                (0.36)                 (0.1)                (0.45)                (0.03)
+=============================================================================================================================
+seg-0
+  mean                       249.2919              111.6665              157.2027              195.4231              159.0165
+  std. dev.                  116.3864               83.3622              114.8411               102.074               30.1332
+  weight sum                      700                  4922                  1392                  6046                   454
+  precision                   10.7447               10.7447               10.7447               10.7447               10.7447
+
+seg-1
+  mean                       250.6649              110.0078               157.479              193.9458              160.5754
+  std. dev.                  164.3986               70.9787              148.0757               87.8273               26.4852
+  weight sum                      700                  4922                  1392                  6046                   454
+  precision                   11.5241               11.5241               11.5241               11.5241               11.5241
+
+seg-2
+  mean                        254.716              109.7585              156.6818              193.5093              163.7022
+  std. dev.                  361.5732               66.4017              105.8393               86.0759               34.9661
+  weight sum                      700                  4922                  1392                  6046                   454
+  precision                   24.5526               24.5526               24.5526               24.5526               24.5526
+
+seg-3
+  mean                       252.1205              110.1512              153.5165              194.4083              159.3983
+  std. dev.                  129.5582               76.1241                61.087               85.6798               29.6792
+  weight sum                      700                  4922                  1392                  6046                   454
+  precision                    6.1141                6.1141                6.1141                6.1141                6.1141
+
+seg-4
+  mean                       250.8481               109.787              158.1169              193.8741              158.9088
+  std. dev.                  167.5825               65.3649              181.1468               83.7449               31.9449
+  weight sum                      700                  4922                  1392                  6046                   454
+  precision                   16.9672               16.9672               16.9672               16.9672               16.9672
+
+
+
+Time taken to build model: 0.08 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        7476               55.3204 %
+Incorrectly Classified Instances      6038               44.6796 %
+Kappa statistic                          0.3631
+Mean absolute error                      0.1874
+Root mean squared error                  0.3737
+Relative absolute error                 71.7751 %
+Root relative squared error            103.4335 %
+Total Number of Instances            13514     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.297    0.043    0.272      0.297    0.284      0.243    0.783     0.218     AFIB
+                 0.875    0.269    0.650      0.875    0.746      0.583    0.887     0.847     B-VT-VF-VFL-ASYS
+                 0.001    0.005    0.016      0.001    0.001      -0.020   0.364     0.075     BI
+                 0.428    0.098    0.780      0.428    0.553      0.382    0.771     0.698     HGEA-N-NOD-PM-SBR-VER
+                 0.822    0.182    0.136      0.822    0.233      0.286    0.886     0.377     SVTA
+Weighted Avg.    0.553    0.151    0.606      0.553    0.542      0.403    0.776     0.652     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e   <-- classified as
+  208  177    4  310    1 |    a = AFIB
+   58 4307   32  358  167 |    b = B-VT-VF-VFL-ASYS
+   10  427    1   15  939 |    c = BI
+  488 1677   26 2587 1268 |    d = HGEA-N-NOD-PM-SBR-VER
+    1   34    0   46  373 |    e = SVTA
+
+

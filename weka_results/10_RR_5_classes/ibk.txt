@@ -1,0 +1,59 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     segments
+Instances:    6757
+Attributes:   11
+              seg-0
+              seg-1
+              seg-2
+              seg-3
+              seg-4
+              seg-5
+              seg-6
+              seg-7
+              seg-8
+              seg-9
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        5008               74.1157 %
+Incorrectly Classified Instances      1749               25.8843 %
+Kappa statistic                          0.6023
+Mean absolute error                      0.1038
+Root mean squared error                  0.3208
+Relative absolute error                 39.7417 %
+Root relative squared error             88.7882 %
+Total Number of Instances             6757     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.397    0.028    0.436      0.397    0.416      0.386    0.692     0.209     AFIB
+                 0.769    0.090    0.831      0.769    0.798      0.691    0.844     0.737     B-VT-VF-VFL-ASYS
+                 0.616    0.049    0.593      0.616    0.605      0.558    0.789     0.430     BI
+                 0.790    0.216    0.747      0.790    0.768      0.572    0.793     0.704     HGEA-N-NOD-PM-SBR-VER
+                 0.700    0.012    0.663      0.700    0.681      0.670    0.852     0.512     SVTA
+Weighted Avg.    0.741    0.136    0.743      0.741    0.741      0.607    0.808     0.656     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e   <-- classified as
+  139   40    3  164    4 |    a = AFIB
+   68 1892   76  399   26 |    b = B-VT-VF-VFL-ASYS
+    3   40  429  205   19 |    c = BI
+  105  295  202 2389   32 |    d = HGEA-N-NOD-PM-SBR-VER
+    4   11   13   40  159 |    e = SVTA
+
+
